@@ -3,10 +3,11 @@
 - Features
 
 1. Quartus II
-2. Board Alterna DE2 - 115 ,
+   Folow link to download: https://drive.google.com/drive/folders/1VO0usubTHSutqNudigix_9YhKB8Gqt5b?usp=sharing
+3. Board Alterna DE2 - 115 ,
    Family: Cyclone IV E,
    Device: EP4CE115F29C8
-3. Language programming : C/C++
+4. Language programming : C/C++
 
 ## Contents
 

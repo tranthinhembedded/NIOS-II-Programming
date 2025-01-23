@@ -3,7 +3,7 @@
 - Features
 
 1. Quartus II
-   - Folow link to download: https://drive.google.com/drive/folders/1VO0usubTHSutqNudigix_9YhKB8Gqt5b?usp=sharing
+   - Follow link to download: https://drive.google.com/drive/folders/1VO0usubTHSutqNudigix_9YhKB8Gqt5b?usp=sharing
 3. Board Alterna DE2 - 115 ,
    Family: Cyclone IV E,
    Device: EP4CE115F29C8

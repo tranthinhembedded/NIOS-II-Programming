@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include "system.h"
+#include "unistd.h"
+#include "io.h"
+#include "sys/alt_stdio.h"
+int main()
+{
+	int i = 0;
+	alt_putstr("Hello from nios!\n");
+
+	while(1){
+		IOWR(LEDR_BASE,0,1);
+		usleep(500000);
+		i++;
+	}
+	return 0;
+}

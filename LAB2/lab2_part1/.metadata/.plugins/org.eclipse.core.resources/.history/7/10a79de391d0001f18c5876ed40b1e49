@@ -1,0 +1,35 @@
+//
+#include <io.h>
+#include <system.h>
+void main() {
+	int temp;
+	while (1) {
+		temp = IORD(SWITCH_BASE, 0);
+		IOWR(LED_BASE, 0, temp);
+	}
+
+
+
+}
+
+
+//#include <system.h>
+//#include <io.h>
+//#include <stdint.h>
+//
+//int main() {
+//    uint8_t sw_value;
+//    uint8_t and_result;
+//
+//    while (1) {
+//
+//        sw_value = IORD(SWITCH_BASE,0) & 0x03;
+//
+//        and_result = (sw_value & 0x01) & ((sw_value >> 1) & 0x01); // SW[0] AND SW[1]
+//
+//
+//        IOWR(LED_BASE,0, and_result);
+//    }
+//
+//    return 0;
+//}

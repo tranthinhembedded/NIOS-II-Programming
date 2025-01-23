@@ -1,0 +1,16 @@
+module lab3_part1 (
+    input         CLOCK_50,
+    input  [0:0]  KEY,
+    input  [15:0] SW,
+    output [15:0] LEDR
+);
+
+    lab3part1 u0 (
+        .clk_clk                   (CLOCK_50),                   //                clk.clk
+        .reset_reset_n             (KEY),             //              reset.reset_n
+        .switch_conduit_end_export (SW), // switch_conduit_end.export
+        .led_conduit_end_export    (LEDR)     //    led_conduit_end.export
+    );
+
+endmodule
+

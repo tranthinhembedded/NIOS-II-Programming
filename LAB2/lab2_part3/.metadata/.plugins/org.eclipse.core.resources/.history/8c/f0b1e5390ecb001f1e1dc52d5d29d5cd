@@ -1,0 +1,38 @@
+#include <system.h>
+#include <io.h>
+#include <stdint.h>
+
+uint8_t segment_table[16] = {
+    0x3F, // 0
+    0x06, // 1
+    0x5B, // 2
+    0x4F, // 3
+    0x66, // 4
+    0x6D, // 5
+    0x7D, // 6
+    0x07, // 7
+    0x7F, // 8
+    0x6F, // 9
+    0x77, // A
+    0x7C, // B
+    0x39, // C
+    0x5E, // D
+    0x79, // E
+    0x71  // F
+};
+
+int main() {
+    uint8_t sw_value;
+    uint8_t hex_value;
+
+    while (1) {
+
+        sw_value = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE) & 0x0F;
+
+        hex_value = segment_table[sw_value];
+
+        IOWR_ALTERA_AVALON_PIO_DATA(LED_BASE, hex_value);
+    }
+
+    return 0;
+}

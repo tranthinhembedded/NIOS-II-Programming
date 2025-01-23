@@ -1,0 +1,9 @@
+	component led is
+		port (
+			clk_clk                           : in  std_logic                     := 'X';             -- clk
+			reset_reset_n                     : in  std_logic                     := 'X';             -- reset_n
+			ledr_external_connection_export   : out std_logic_vector(31 downto 0);                    -- export
+			switch_external_connection_export : in  std_logic_vector(31 downto 0) := (others => 'X')  -- export
+		);
+	end component led;
+

@@ -1,0 +1,29 @@
+what,kind,bundleId,bundleVersion,description,time
+java.runtime.version,sysinfo,,,"1.6.0_23-b05",1736594467927
+java.specification.name,sysinfo,,,"Java Platform API Specification",1736594467927
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1736594467927
+java.specification.version,sysinfo,,,"1.6",1736594467927
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1736594467927
+java.version,sysinfo,,,"1.6.0_23",1736594467927
+java.vm.info,sysinfo,,,"mixed mode",1736594467927
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1736594467927
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1736594467927
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1736594467927
+java.vm.specification.version,sysinfo,,,"1.0",1736594467927
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1736594467927
+java.vm.version,sysinfo,,,"19.0-b09",1736594467927
+started,bundle,org.eclipse.cdt.codan.ui,2.0.1.201202111925,"org.eclipse.cdt.codan.ui",1736594468243
+started,bundle,org.eclipse.epp.usagedata.ui,1.3.1.R201106061540,"org.eclipse.epp.usagedata.ui",1736594468942
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736594469192
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736594473793
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736594494386
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736594495922
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736594500736
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736600307181
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736600308165
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736600312494
+started,bundle,org.eclipse.cdt.mylyn.ui,3.6.0.v20110608-1400,"org.eclipse.cdt.mylyn.ui",1736600312659
+closed,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736600312713
+started,bundle,org.eclipse.compare,3.5.202.R37x_v20111109-0800,"org.eclipse.compare",1736600313081
+started,bundle,com.altera.sbtgui.core,13.13.0.132,"com.altera.sbtgui.core",1736600313182
+stopped,bundle,org.eclipse.cdt.build.crossgcc,1.0.2.201202111925,"org.eclipse.cdt.build.crossgcc",1736600313237

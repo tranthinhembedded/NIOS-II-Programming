@@ -1,0 +1,97 @@
+set_global_assignment -entity "ledseg" -library "ledseg" -name IP_TOOL_NAME "Qsys"
+set_global_assignment -entity "ledseg" -library "ledseg" -name IP_TOOL_VERSION "13.0sp1"
+set_global_assignment -entity "ledseg" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -library "ledseg" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../ledseg.sopcinfo"]
+set_instance_assignment -entity "ledseg" -library "ledseg" -name SLD_INFO "QSYS_NAME ledseg HAS_SOPCINFO 1 GENERATION_ID 1736043685"
+set_global_assignment -library "ledseg" -name MISC_FILE [file join $::quartus(qip_path) "../../ledseg.cmp"]
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -library "ledseg" -name MISC_FILE [file join $::quartus(qip_path) "../../ledseg.qsys"]
+
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "ledseg.v"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_irq_mapper.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_arbitrator.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_rsp_xbar_mux.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_rsp_xbar_demux.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_cmd_xbar_mux.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_cmd_xbar_demux.sv"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.v"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_reset_synchronizer.v"]
+set_global_assignment -library "ledseg" -name SDC_FILE [file join $::quartus(qip_path) "submodules/altera_reset_controller.sdc"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_id_router.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_addr_router.sv"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_avalon_sc_fifo.v"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_agent.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_burst_uncompressor.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_agent.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_slave_translator.sv"]
+set_global_assignment -library "ledseg" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "submodules/altera_merlin_master_translator.sv"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_led.v"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_switch.v"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_jtag_uart_0.v"]
+set_global_assignment -library "ledseg" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/ledseg_onchip_memory2_0.hex"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_onchip_memory2_0.v"]
+set_global_assignment -library "ledseg" -name SDC_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0.sdc"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0.v"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_jtag_debug_module_sysclk.v"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_jtag_debug_module_tck.v"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_jtag_debug_module_wrapper.v"]
+set_global_assignment -library "ledseg" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_ociram_default_contents.mif"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_oci_test_bench.v"]
+set_global_assignment -library "ledseg" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_rf_ram_a.mif"]
+set_global_assignment -library "ledseg" -name SOURCE_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_rf_ram_b.mif"]
+set_global_assignment -library "ledseg" -name VERILOG_FILE [file join $::quartus(qip_path) "submodules/ledseg_nios2_qsys_0_test_bench.v"]
+
+set_global_assignment -entity "ledseg_irq_mapper" -library "ledseg" -name IP_TOOL_NAME "altera_irq_mapper"
+set_global_assignment -entity "ledseg_irq_mapper" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_irq_mapper" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_rsp_xbar_mux" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "ledseg_rsp_xbar_mux" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_rsp_xbar_mux" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_rsp_xbar_demux" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "ledseg_rsp_xbar_demux" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_rsp_xbar_demux" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_cmd_xbar_mux" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_multiplexer"
+set_global_assignment -entity "ledseg_cmd_xbar_mux" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_cmd_xbar_mux" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_cmd_xbar_demux" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_demultiplexer"
+set_global_assignment -entity "ledseg_cmd_xbar_demux" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_cmd_xbar_demux" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_reset_controller" -library "ledseg" -name IP_TOOL_NAME "altera_reset_controller"
+set_global_assignment -entity "altera_reset_controller" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_reset_controller" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_id_router" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "ledseg_id_router" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_id_router" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_addr_router" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_router"
+set_global_assignment -entity "ledseg_addr_router" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_addr_router" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "ledseg" -name IP_TOOL_NAME "altera_avalon_sc_fifo"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_avalon_sc_fifo" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_slave_agent"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_agent" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_agent" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_master_agent"
+set_global_assignment -entity "altera_merlin_master_agent" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_agent" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_slave_translator"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_slave_translator" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "altera_merlin_master_translator" -library "ledseg" -name IP_TOOL_NAME "altera_merlin_master_translator"
+set_global_assignment -entity "altera_merlin_master_translator" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "altera_merlin_master_translator" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_led" -library "ledseg" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "ledseg_led" -library "ledseg" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "ledseg_led" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_switch" -library "ledseg" -name IP_TOOL_NAME "altera_avalon_pio"
+set_global_assignment -entity "ledseg_switch" -library "ledseg" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "ledseg_switch" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_jtag_uart_0" -library "ledseg" -name IP_TOOL_NAME "altera_avalon_jtag_uart"
+set_global_assignment -entity "ledseg_jtag_uart_0" -library "ledseg" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "ledseg_jtag_uart_0" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_onchip_memory2_0" -library "ledseg" -name IP_TOOL_NAME "altera_avalon_onchip_memory2"
+set_global_assignment -entity "ledseg_onchip_memory2_0" -library "ledseg" -name IP_TOOL_VERSION "13.0.1.99.2"
+set_global_assignment -entity "ledseg_onchip_memory2_0" -library "ledseg" -name IP_TOOL_ENV "Qsys"
+set_global_assignment -entity "ledseg_nios2_qsys_0" -library "ledseg" -name IP_TOOL_NAME "altera_nios2_qsys"
+set_global_assignment -entity "ledseg_nios2_qsys_0" -library "ledseg" -name IP_TOOL_VERSION "13.0"
+set_global_assignment -entity "ledseg_nios2_qsys_0" -library "ledseg" -name IP_TOOL_ENV "Qsys"

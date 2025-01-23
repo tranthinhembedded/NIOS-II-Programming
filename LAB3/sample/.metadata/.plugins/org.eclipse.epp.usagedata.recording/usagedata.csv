@@ -1,0 +1,42 @@
+what,kind,bundleId,bundleVersion,description,time
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1736638449851
+java.version,sysinfo,,,"1.6.0_23",1736638449851
+java.vm.info,sysinfo,,,"mixed mode",1736638449851
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1736638449851
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1736638449851
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1736638449851
+java.vm.specification.version,sysinfo,,,"1.0",1736638449851
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1736638449851
+java.vm.version,sysinfo,,,"19.0-b09",1736638449851
+started,bundle,com.altera.sbtgui.integration,13.13.0.132,"com.altera.sbtgui.integration",1736638449950
+started,bundle,com.altera.systemconsole,13.13.0.132,"com.altera.systemconsole",1736638449990
+started,bundle,com.altera.utilities,13.13.0.132,"com.altera.utilities",1736638450035
+started,bundle,com.altera.systemconsole.designs.plugin,13.13.0.132,"com.altera.systemconsole.designs.plugin",1736638450102
+opened,view,org.eclipse.ui.ide,3.7.0.v20110928-1505,"org.eclipse.ui.views.ProblemView",1736638450394
+started,bundle,com.altera.sbtgui.launch,13.13.0.132,"com.altera.sbtgui.launch",1736638451969
+started,bundle,com.altera.sbtgui.core,13.13.0.132,"com.altera.sbtgui.core",1736638482544
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1736638482561
+activated,view,org.eclipse.ui.navigator.resources,3.4.300.v20110928-1505,"org.eclipse.ui.navigator.ProjectExplorer",1736638540381
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736638569697
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736638604703
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736639032306
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736639794041
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736639846163
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736639856446
+activated,editor,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui.editor.CEditor",1736639882371
+executed,command,org.eclipse.ui,3.7.0.v20110928-1505,"org.eclipse.ui.file.save",1736639887630
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736639968664
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640230363
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640230652
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640231303
+opened,editor,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui.editor.CEditor",1736640234277
+activated,editor,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui.editor.CEditor",1736640234364
+activated,editor,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui.editor.CEditor",1736640236011
+closed,editor,org.eclipse.cdt.ui,5.3.2.201202111925,"org.eclipse.cdt.ui.editor.CEditor",1736640236011
+started,bundle,org.eclipse.cdt.mylyn.ui,3.6.0.v20110608-1400,"org.eclipse.cdt.mylyn.ui",1736640236077
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640243109
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640272749
+deactivated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640274795
+activated,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640276323
+closed,workbench,org.eclipse.ui.workbench,3.7.1.v20120104-1859,"",1736640276534
+started,bundle,org.eclipse.compare,3.5.202.R37x_v20111109-0800,"org.eclipse.compare",1736640276735

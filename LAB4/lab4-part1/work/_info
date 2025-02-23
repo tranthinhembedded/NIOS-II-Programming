@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vcounter4bits
+Z1 !s100 H`[PS1>j9zjac52B8IAk12
+Z2 I]@6IZbIIJU2z2J[KiP1S82
+Z3 VFJ]56Rz4hYa8SzO4YM9_n0
+Z4 dD:\TH_SOC\LAB4\lab4-part1
+Z5 w1740272236
+Z6 8D:/TH_SOC/LAB4/lab4-part1/Counter4bits.v
+Z7 FD:/TH_SOC/LAB4/lab4-part1/Counter4bits.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/TH_SOC/LAB4/lab4-part1/Counter4bits.v|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1740273405.315000
+Z12 !s107 D:/TH_SOC/LAB4/lab4-part1/Counter4bits.v|
+!s101 -O0
+vcounter4bits_tb
+!i10b 1
+!s100 GRGFPVIgi]3k<G]XVlNIU2
+IYCYlMMeMf@^nbF4FY6PU=1
+Z13 VZM<Y_RTA9Y[W=h0L5D1>?0
+R4
+w1740273312
+Z14 8D:/TH_SOC/LAB4/lab4-part1/counter4bits_tb.v
+Z15 FD:/TH_SOC/LAB4/lab4-part1/counter4bits_tb.v
+L0 2
+R8
+r1
+!s85 0
+31
+!s108 1740273405.394000
+!s107 D:/TH_SOC/LAB4/lab4-part1/counter4bits_tb.v|
+Z16 !s90 -reportprogress|300|-work|work|D:/TH_SOC/LAB4/lab4-part1/counter4bits_tb.v|
+!s101 -O0
+R10

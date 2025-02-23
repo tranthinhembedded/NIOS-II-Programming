@@ -1,0 +1,15 @@
+D:/TH_SOC/LAB4/lab4-part1/lab4part1/synthesis/counter4bits.v {1 {vlog -work lab4simulation D:/TH_SOC/LAB4/lab4-part1/lab4part1/synthesis/counter4bits.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module counter4bits
+
+Top level modules:
+	counter4bits
+
+} {} {}} D:/TH_SOC/LAB4/lab4-part1/lab4part1/synthesis/counter4bits_tb.v {1 {vlog -work lab4simulation D:/TH_SOC/LAB4/lab4-part1/lab4part1/synthesis/counter4bits_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module counter4bits_tb
+
+Top level modules:
+	counter4bits_tb
+
+} {} {}}

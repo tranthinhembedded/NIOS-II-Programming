@@ -1,0 +1,27 @@
+|counter4bits
+iClk => oData[0]~reg0.CLK
+iClk => oData[1]~reg0.CLK
+iClk => oData[2]~reg0.CLK
+iClk => oData[3]~reg0.CLK
+iReset_n => oData[0]~reg0.ACLR
+iReset_n => oData[1]~reg0.ACLR
+iReset_n => oData[2]~reg0.ACLR
+iReset_n => oData[3]~reg0.ACLR
+iEnable => always0.IN0
+iEnable => always0.IN0
+iClear => oData.OUTPUTSELECT
+iClear => oData.OUTPUTSELECT
+iClear => oData.OUTPUTSELECT
+iClear => oData.OUTPUTSELECT
+iUp_down => always0.IN1
+iUp_down => always0.IN1
+iInitialValue[0] => oData.DATAB
+iInitialValue[1] => oData.DATAB
+iInitialValue[2] => oData.DATAB
+iInitialValue[3] => oData.DATAB
+oData[0] <= oData[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oData[1] <= oData[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oData[2] <= oData[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+oData[3] <= oData[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

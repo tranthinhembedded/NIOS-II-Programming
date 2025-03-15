@@ -1,0 +1,31 @@
+`timescale 1ns/1ns
+
+module testbench;
+    reg clk;
+    reg reset_n;
+
+    // Instance of nios_sys
+    nios_sys uut (
+        .clk_clk(clk),
+        .reset_reset_n(reset_n)
+    );
+
+    // Clock generation
+    initial begin
+        clk = 0;
+        forever #10 clk = ~clk; // Clock period = 20ns (50 MHz)
+    end
+
+    // Reset sequence
+    initial begin
+        reset_n = 0;
+        #50 reset_n = 1; // Reset active for 50ns
+        #1000 $finish;   // Kết thúc simulation sau 1µs
+    end
+
+    // Monitor signals (tuỳ chọn)
+    initial begin
+        $monitor("Time=%0t clk=%b reset_n=%b", $time, clk, reset_n);
+    end
+
+endmodule

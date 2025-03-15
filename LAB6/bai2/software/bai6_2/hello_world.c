@@ -1,0 +1,79 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+#include "io.h"
+
+const unsigned char hex_table[16] = {
+    0xC0, // 0
+    0xF9, // 1
+    0xA4, // 2
+    0xB0, // 3
+    0x99, // 4
+    0x92, // 5
+    0x82, // 6
+    0xF8, // 7
+    0x80, // 8
+    0x90, // 9
+    0x88, // A
+    0x83, // B
+    0xC6, // C
+    0xA1, // D
+    0x86, // E
+    0x8E  // F
+};
+
+unsigned int counter = 0;
+unsigned int led_state = 0;
+
+void Timer_IRQ_Handler(void* isr_context)
+{
+    counter++;
+    printf("%d seconds\n", counter);
+
+    // Hien thi led 7 doan
+    int units = counter % 10;
+    int tens  = (counter / 10) % 10;
+    IOWR(LED_0_BASE, 0, hex_table[units]);
+    IOWR(LED_1_BASE, 0, hex_table[tens]);
+
+    // sang duoi khi counter = 91 (MSSV: 21122091)
+    if (counter == 91) {
+        led_state = (led_state << 1) | 0x0001;
+        if (led_state > 0xFFFF) led_state = 0x0001;
+        IOWR(LEDR_BASE, 0, led_state);
+    } else {
+        IOWR(LEDR_BASE, 0, 0x0000); // tat led
+    }
+
+    IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, ALTERA_AVALON_TIMER_STATUS_TO_MSK);
+}
+
+void Timer_Init(void)
+{
+    unsigned int period = 50000000 - 1;
+
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK);
+
+    IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_0_BASE, period);
+    IOWR_ALTERA_AVALON_TIMER_PERIODH(TIMER_0_BASE, (period >> 16));
+
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_CONT_MSK |
+                                                  ALTERA_AVALON_TIMER_CONTROL_ITO_MSK  |
+                                                  ALTERA_AVALON_TIMER_CONTROL_START_MSK);
+}
+
+int main(void)
+{
+    Timer_Init();
+
+    alt_ic_isr_register(0, TIMER_0_IRQ, Timer_IRQ_Handler, (void*)0, (void*)0);
+
+    while (1) {
+        // read sw1 state
+        int sw1 = (IORD(SWITCH_0_BASE, 0) & 0x02) >> 1;
+        if (sw1 == 1 && counter < 13) {
+            counter = 13;
+        }
+    }
+}

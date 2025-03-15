@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vlab6_bai1_tb
+Z1 VW?46j]@<RhS4DE?;=dzPi2
+r1
+31
+Z2 IeFaAg=TBWGM48@:TWnfo?0
+Z3 dD:\TH_SOC\LAB6\bai1\modelSim_proj
+Z4 w1741483212
+Z5 8D:/TH_SOC/LAB6/bai1/nios_sys/simulation/lab6_bai1_tb.v
+Z6 FD:/TH_SOC/LAB6/bai1/nios_sys/simulation/lab6_bai1_tb.v
+L0 3
+Z7 OV;L;10.1d;51
+Z8 o-work lab6_bai1 -O0
+Z9 !s100 YT@00R;7=gXcmCzjEXiIn0
+Z10 !s108 1741483365.894000
+Z11 !s107 D:/TH_SOC/LAB6/bai1/nios_sys/simulation/lab6_bai1_tb.v|
+Z12 !s90 -reportprogress|300|-work|lab6_bai1|D:/TH_SOC/LAB6/bai1/nios_sys/simulation/lab6_bai1_tb.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vnios_sys
+Z13 !s100 G1eZiW[BVnAPPWjQfQHWR2
+Z14 IRnQ<FM5;9iiWBcZ_PBT0m3
+Z15 Vo9:6Z>HXJTk1IiRz=Fl1L3
+R3
+Z16 w1741483953
+Z17 8D:/TH_SOC/LAB6/bai1/nios_sys/simulation/nios_sys.v
+Z18 FD:/TH_SOC/LAB6/bai1/nios_sys/simulation/nios_sys.v
+L0 6
+R7
+r1
+31
+Z19 !s90 -reportprogress|300|-work|lab6_bai1|D:/TH_SOC/LAB6/bai1/nios_sys/simulation/nios_sys.v|
+R8
+!i10b 1
+!s85 0
+Z20 !s108 1741484147.903000
+Z21 !s107 D:/TH_SOC/LAB6/bai1/nios_sys/simulation/nios_sys.v|
+!s101 -O0
+vnios_sys_tb
+!i10b 1
+Z22 !s100 bc4MVoB943>U[0KGOR2@o3
+Z23 IKEI`@dDDW3QGFTKY:J]Bh1
+Z24 Vh_bk1IN@kzVImL?6U@[A?2
+R3
+Z25 w1741483965
+Z26 8D:/TH_SOC/LAB6/bai1/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
+Z27 FD:/TH_SOC/LAB6/bai1/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
+L0 6
+R7
+r1
+!s85 0
+31
+!s108 1741484147.985000
+!s107 D:/TH_SOC/LAB6/bai1/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v|
+Z28 !s90 -reportprogress|300|-work|lab6_bai1|D:/TH_SOC/LAB6/bai1/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v|
+!s101 -O0
+R8
+vtestbench
+Z29 ISi;W`n`f:5>D>?RzgZ_Fh1
+Z30 VhGfW:390DM[oDMzegDH9`2
+R3
+Z31 w1741483731
+Z32 8D:\TH_SOC\LAB6\bai1\nios_sys\simulation\lab6_bai1_tb.v
+Z33 FD:\TH_SOC\LAB6\bai1\nios_sys\simulation\lab6_bai1_tb.v
+L0 3
+R7
+r1
+31
+R8
+Z34 !s100 =6NIi;]05hEgBGCj6E:dW1
+Z35 !s108 1741483736.162000
+Z36 !s107 D:\TH_SOC\LAB6\bai1\nios_sys\simulation\lab6_bai1_tb.v|
+Z37 !s90 -reportprogress|300|-work|lab6_bai1|D:\TH_SOC\LAB6\bai1\nios_sys\simulation\lab6_bai1_tb.v|
+!i10b 1
+!s85 0
+!s101 -O0

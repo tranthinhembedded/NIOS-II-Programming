@@ -1,0 +1,15 @@
+D:/TH_SOC/LAB6/bai1/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v {1 {vlog -work lab6_bai1 D:/TH_SOC/LAB6/bai1/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module nios_sys_tb
+
+Top level modules:
+	nios_sys_tb
+
+} {} {}} D:/TH_SOC/LAB6/bai1/nios_sys/simulation/nios_sys.v {1 {vlog -work lab6_bai1 D:/TH_SOC/LAB6/bai1/nios_sys/simulation/nios_sys.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module nios_sys
+
+Top level modules:
+	nios_sys
+
+} {} {}}

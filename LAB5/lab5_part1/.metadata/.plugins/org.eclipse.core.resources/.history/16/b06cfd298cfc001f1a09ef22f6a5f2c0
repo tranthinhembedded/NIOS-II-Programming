@@ -1,0 +1,52 @@
+/* lab5.c */
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+
+/* global variable, increase 1 after 1 second */
+unsigned int counter = 0;
+
+/* Interrupt handler of Timer */
+void Timer_IRQHandler(void* isr_context)
+{
+    // Increase counter and print it to console
+    counter++;
+    printf("%d seconds\n", counter);
+
+    // Clear Timer interrupt bit
+    IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, ALTERA_AVALON_TIMER_STATUS_TO_MSK);
+}
+
+/* Initialize function of Timer */
+void Timer_Init(void)
+{
+    unsigned int period = 0;
+
+    // Stop Timer
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK);
+
+    // The Timer's clock is 50 Mhz
+    // In order to set the period of the Timer to 1 second, the period register must be (50000000-1)
+    period = 50000000 - 1;
+
+    IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_0_BASE, period & 0xFFFF);
+    IOWR_ALTERA_AVALON_TIMER_PERIODS(TIMER_0_BASE, (period >> 16));
+
+    // Configure and Start Timer
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_CONT_MSK | // Continue counting mode
+                                                  ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | // Interrupt enable
+                                                  ALTERA_AVALON_TIMER_CONTROL_START_MSK); // Start Timer
+}
+
+/* entry point main() */
+int main(void)
+{
+    // Configure the Timer
+    Timer_Init();
+
+    // Register Timer's interrupt handler
+    alt_ic_isr_register(TIMER_0_IRQ, 0, Timer_IRQHandler, (void*)0, (void*)0);
+
+    while(1);
+}

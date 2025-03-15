@@ -1,0 +1,11 @@
+module lab5(CLOCK_50, KEY);
+
+input CLOCK_50;
+input [0:1] KEY;
+
+system u0 (
+    .clk_clk (CLOCK_50),
+    .reset_reset_n (KEY[1])
+);
+
+endmodule

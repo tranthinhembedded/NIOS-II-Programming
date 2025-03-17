@@ -1,0 +1,12 @@
+	component nios_sys is
+		port (
+			clk_clk                             : in  std_logic                    := 'X'; -- clk
+			reset_reset_n                       : in  std_logic                    := 'X'; -- reset_n
+			lcd_data_external_connection_export : out std_logic_vector(7 downto 0);        -- export
+			lcd_rw_external_connection_export   : out std_logic;                           -- export
+			lcd_rs_external_connection_export   : out std_logic;                           -- export
+			lcd_en_external_connection_export   : out std_logic;                           -- export
+			lcd_on_external_connection_export   : out std_logic                            -- export
+		);
+	end component nios_sys;
+

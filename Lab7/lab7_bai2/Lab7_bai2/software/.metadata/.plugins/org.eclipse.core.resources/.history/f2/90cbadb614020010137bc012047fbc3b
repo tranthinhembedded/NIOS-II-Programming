@@ -1,0 +1,89 @@
+#include "sys/alt_stdio.h"
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include <unistd.h>
+
+// Ham gui lenh den LCD
+void lcd_command(char data) {
+    IOWR(LCD_RS_BASE, 0, 0x00);  // RS = 0 (lenh)
+    IOWR(LCD_RW_BASE, 0, 0x00);  // RW = 0 (chi ghi)
+    IOWR(LCD_DATA_BASE, 0, data);  // Gui lenh
+    IOWR(LCD_EN_BASE, 0, 0x01);  // EN = 1
+    usleep(5);  // Delay
+    IOWR(LCD_EN_BASE, 0, 0x00);  // EN = 0
+    usleep(5);  // Delay
+}
+
+// Ham gui du lieu den LCD
+void lcd_data(char data) {
+    IOWR(LCD_RS_BASE, 0, 0x01);  // RS = 1 (du lieu)
+    IOWR(LCD_RW_BASE, 0, 0x00);  // RW = 0 (chi ghi)
+    IOWR(LCD_DATA_BASE, 0, data);  // Gui du lieu
+    IOWR(LCD_EN_BASE, 0, 0x01);  // EN = 1
+    usleep(5);  // Delay
+    IOWR(LCD_EN_BASE, 0, 0x00);  // EN = 0
+    usleep(5);  // Delay
+}
+
+// Ham hien thi chuoi ky tu len LCD
+void lcd_string(char *str) {
+    int i = 0;
+    while (str[i] != 0) {
+        lcd_data(str[i]);
+        i++;
+    }
+}
+
+// Ham khoi tao LCD
+void lcd_init(void) {
+    usleep(15000);  // Delay cho LCD khoi tao
+    lcd_command(0x38);  // Che do 8-bit, 2 dong
+    usleep(4100);
+    lcd_command(0x38);  // Cung cap thoi gian
+    usleep(100);
+    lcd_command(0x38);  // Cung cap thoi gian
+    usleep(2000);
+    lcd_command(0x0C);  // Hien thi bat, con tro tat
+    usleep(2000);
+    lcd_command(0x01);  // Xoa man hinh
+    usleep(2000);
+    lcd_command(0x06);  // Con tro di chuyen sang phai
+    usleep(2000);
+}
+
+int main() {
+    int count = 0;
+    char lcd_buffer[16];
+
+    alt_putstr("Hello from Nios II!\n");
+
+    IOWR(LCD_ON_BASE, 0, 0x01);  // Bat LCD
+    usleep(50000);
+
+    lcd_init();  // Khoi tao LCD
+
+    // Kiem tra nut nhan
+    while (1) {
+        // Doc gia tri nut nhan
+        int button_state = IORD(SWITCH_BASE, 0);
+
+
+        if (button_state & 0x01) {
+            count++;
+            if (count > 99) {
+                count = 0;
+            }
+            usleep(200000);
+        }
+
+        // Hien thi gia tri bo dem tren LCD
+        lcd_command(0x80);
+        sprintf(lcd_buffer, "Count: %02d", count);
+        lcd_string(lcd_buffer);  //
+
+        usleep(500000);  //
+    }
+
+    return 0;
+}

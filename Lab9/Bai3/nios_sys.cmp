@@ -1,0 +1,19 @@
+	component nios_sys is
+		port (
+			clk_clk                          : in  std_logic                    := 'X'; -- clk
+			reset_reset_n                    : in  std_logic                    := 'X'; -- reset_n
+			led11_external_connection_export : out std_logic_vector(7 downto 0);        -- export
+			led10_external_connection_export : out std_logic_vector(7 downto 0);        -- export
+			led9_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led8_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led7_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led6_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led5_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led4_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led3_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led2_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led1_external_connection_export  : out std_logic_vector(7 downto 0);        -- export
+			led0_external_connection_export  : out std_logic_vector(7 downto 0)         -- export
+		);
+	end component nios_sys;
+

@@ -1,0 +1,49 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
+vnios_sys_id_router
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 5RNeI8`OUUfd^3A12?hjQ0
+Ig]9a8JTZz:@e_F<CBDg4X3
+V8h?cRA^i4hJj<mX[DgWbe0
+Z2 !s105 nios_sys_id_router_sv_unit
+S1
+Z3 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
+Z4 w1744430082
+Z5 8D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_id_router.sv
+Z6 FD:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_id_router.sv
+L0 86
+Z7 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z8 !s108 1744430381.626000
+Z9 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_id_router.sv|
+Z10 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_id_router.sv|-work|id_router|
+!s101 -O0
+Z11 o-sv -work id_router -O0
+vnios_sys_id_router_default_decode
+R1
+!i10b 1
+!s100 :z6V]PoiWh5RZbSA]l_9]1
+IS<Z3`b=WV_EGd0U=7G^fZ2
+VNVc`hzjLZdDQST2c_ITEV2
+R2
+S1
+R3
+R4
+R5
+R6
+L0 45
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!s101 -O0
+R11

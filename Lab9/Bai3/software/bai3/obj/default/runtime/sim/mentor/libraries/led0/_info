@@ -1,0 +1,24 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
+vnios_sys_led0
+!i10b 1
+!s100 Gjl=Yz3<JDS>c`F=40>]<2
+I=D_S[ck6]M]bm9A;[F0LS3
+VG`b:?_=LQAf<UXN<;Hh<_3
+Z1 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
+w1744430081
+8D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_led0.v
+FD:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_led0.v
+L0 21
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1744430382.271000
+!s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_led0.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_led0.v|-work|led0|
+!s101 -O0
+o-work led0 -O0

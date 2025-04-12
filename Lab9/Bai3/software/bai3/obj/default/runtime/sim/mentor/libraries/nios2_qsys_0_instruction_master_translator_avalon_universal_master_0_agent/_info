@@ -20,7 +20,7 @@ Z2 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744430382.021000
+!s108 1744469859.234000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_master_agent.sv|
 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_master_agent.sv|-work|nios2_qsys_0_instruction_master_translator_avalon_universal_master_0_agent|
 !s101 -O0

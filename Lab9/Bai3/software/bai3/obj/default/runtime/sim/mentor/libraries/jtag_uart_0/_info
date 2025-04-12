@@ -17,7 +17,7 @@ Z5 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z6 !s108 1744430382.401000
+Z6 !s108 1744469859.520000
 Z7 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_jtag_uart_0.v|
 Z8 !s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_jtag_uart_0.v|-work|jtag_uart_0|
 !s101 -O0

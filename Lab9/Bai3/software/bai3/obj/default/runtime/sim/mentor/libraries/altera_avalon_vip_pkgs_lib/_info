@@ -19,7 +19,7 @@ Z2 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744430380.686000
+!s108 1744469858.109000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/verbosity_pkg.sv|
 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/verbosity_pkg.sv|-work|altera_avalon_vip_pkgs_lib|
 !s101 -O0

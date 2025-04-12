@@ -3,10 +3,7 @@
 # nios_sys_tb
 # ./../
 # C:/altera/13.0sp1/quartus/
-# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
-# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
-#          Updated modelsim.ini.
 # Modifying modelsim.ini
 # Modifying modelsim.ini
 # Modifying modelsim.ini
@@ -578,7 +575,23 @@
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
 #   
-run 1ms
+add wave -position insertpoint  \
+sim:/nios_sys_tb/nios_sys_inst/clk_clk \
+sim:/nios_sys_tb/nios_sys_inst/reset_reset_n \
+sim:/nios_sys_tb/nios_sys_inst/led11_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led10_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led9_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led8_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led7_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led6_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led5_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led4_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led3_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led2_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led1_external_connection_export \
+sim:/nios_sys_tb/nios_sys_inst/led0_external_connection_export
+add wave -position insertpoint sim:/nios_sys_tb/nios_sys_inst/irq_mapper/*
+run 3ms
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: nios_sys_tb.nios_sys_inst.nios2_qsys_0.niil11O
 #                    0: INFO: nios_sys_tb.nios_sys_inst_clk_bfm.__hello: - Hello from altera_clock_source.
@@ -595,43 +608,41 @@ run 1ms
 #                    0: INFO: nios_sys_tb.nios_sys_inst_reset_bfm.reset_assert: Reset asserted
 #               990000: INFO: nios_sys_tb.nios_sys_inst_reset_bfm.reset_deassert: Reset deasserted
 # Warning : Address pointed at port A is out of bound!
-# Time: 244010000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 249250000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 244010000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 249250000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 257770000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 263470000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 257770000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 263470000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 257830000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 263530000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 257830000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 263530000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 271710000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 298190000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 271710000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 298190000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 292850000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 298250000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 292850000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 298250000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 292910000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 310070000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 292910000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 310070000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 305050000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 327410000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 305050000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 327410000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 322670000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 327470000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 322670000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 327470000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 322730000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 339290000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 322730000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 339290000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Warning : Address pointed at port A is out of bound!
-# Time: 334870000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
-# Warning : Address pointed at port A is out of bound!
-# Time: 334870000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
+# Time: 366610000  Instance: nios_sys_tb.nios_sys_inst.onchip_memory2_0.the_altsyncram
 # Hello from Nios II!

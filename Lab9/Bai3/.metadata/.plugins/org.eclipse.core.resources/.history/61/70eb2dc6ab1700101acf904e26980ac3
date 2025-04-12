@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+#include "io.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_stdio.h"
+
+const unsigned char hex_table[16] = {
+    0xC0, // 0
+    0xF9, // 1
+    0xA4, // 2
+    0xB0, // 3
+    0x99, // 4
+    0x92, // 5
+    0x82, // 6
+    0xF8, // 7
+    0x80, // 8
+    0x90, // 9
+    0x88, // A
+    0x83, // B
+    0xC6, // C
+    0xA1, // D
+    0x86, // E
+    0x8E  // F
+};
+
+void Timer_IRQ_Handler(void* isr_context)
+{}
+void Timer_Init(void)
+{
+    unsigned int period = 4 - 1;
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK);
+    IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_0_BASE, period);
+    IOWR_ALTERA_AVALON_TIMER_PERIODH(TIMER_0_BASE, (period >> 16));
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_CONT_MSK |
+                                                  ALTERA_AVALON_TIMER_CONTROL_ITO_MSK  |
+                                                  ALTERA_AVALON_TIMER_CONTROL_START_MSK);
+}
+
+int main()
+{
+	  int hh = 23, mm = 59, ss = 30;
+	  int dd = 31, month = 12, year = 2025;
+
+	  Timer_Init();
+	  alt_ic_isr_register(0, TIMER_0_IRQ, Timer_IRQ_Handler, (void*)0, (void*)0);
+	  printf("Hello from Nios II!\n");
+
+	  while(1)
+	  {
+		  int hh_tens = hh / 10;
+		  int hh_units = hh % 10;
+		  int mm_tens = mm / 10;
+		  int mm_units = mm % 10;
+		  int ss_tens = ss / 10;
+		  int ss_units = ss % 10;
+		  int dd_tens = dd / 10;
+		  int dd_units = dd % 10;
+		  int month_tens = month / 10;
+		  int month_units = month % 10;
+		  int year_thousands = (year / 1000) % 10;
+		  int year_hundreds = (year / 100) % 10;
+		  int year_tens = (year / 10) % 10;
+		  int year_units = year % 10;
+
+		  IOWR(LED0_BASE, 0, hex_table[hh_tens]);
+		  IOWR(LED1_BASE, 0, hex_table[hh_units]);
+		  IOWR(LED2_BASE, 0, hex_table[mm_tens]);
+		  IOWR(LED3_BASE, 0, hex_table[mm_units]);
+		  IOWR(LED4_BASE, 0, hex_table[ss_tens]);
+		  IOWR(LED5_BASE, 0, hex_table[ss_units]);
+		  IOWR(LED6_BASE, 0, hex_table[dd_tens]);
+		  IOWR(LED7_BASE, 0, hex_table[dd_units]);
+		  IOWR(LED8_BASE, 0, hex_table[month_tens]);
+		  IOWR(LED9_BASE, 0, hex_table[month_units]);
+		  IOWR(LED10_BASE, 0, hex_table[year_tens]);
+		  IOWR(LED11_BASE, 0, hex_table[year_units]);
+
+		  usleep(1000000);
+		  ss++;
+
+
+		          if (ss == 60) {
+		              ss = 0;
+		              mm++;
+		          }
+		          if (mm == 60) {
+		              mm = 0;
+		              hh++;
+		          }
+		          if (hh == 24) {
+		              hh = 0;
+		              dd++;
+		          }
+
+		          if ((month == 4 || month == 6 || month == 9 || month == 11) && dd > 30) {
+		              dd = 1;
+		              month++;
+		          } else if (month == 2) {
+		              if (dd > 28) {
+		                  dd = 1;
+		                  month++;
+		              }
+		          } else if (dd > 31) {
+		              dd = 1;
+		              month++;
+		          }
+
+		          if (month > 12) {
+		              month = 1;
+		              year++;
+		          }
+
+	  }
+
+	  return 0;
+}

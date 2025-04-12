@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+#include "io.h"
+#include "altera_avalon_pio_regs.h"
+#include "sys/alt_stdio.h"
+
+const unsigned char hex_table[16] = {
+    0xC0, // 0
+    0xF9, // 1
+    0xA4, // 2
+    0xB0, // 3
+    0x99, // 4
+    0x92, // 5
+    0x82, // 6
+    0xF8, // 7
+    0x80, // 8
+    0x90, // 9
+    0x88, // A
+    0x83, // B
+    0xC6, // C
+    0xA1, // D
+    0x86, // E
+    0x8E  // F
+};
+
+void Timer_IRQ_Handler(void* isr_context)
+{}
+void Timer_Init(void)
+{
+    unsigned int period = 4 - 1;
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK);
+    IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_0_BASE, period);
+    IOWR_ALTERA_AVALON_TIMER_PERIODH(TIMER_0_BASE, (period >> 16));
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_CONT_MSK |
+                                                  ALTERA_AVALON_TIMER_CONTROL_ITO_MSK  |
+                                                  ALTERA_AVALON_TIMER_CONTROL_START_MSK);
+}
+
+int main()
+{
+  Timer_Init();
+  alt_ic_isr_register(0, TIMER_0_IRQ, Timer_IRQ_Handler, (void*)0, (void*)0);
+  printf("Hello from Nios II!\n");
+  return 0;
+}

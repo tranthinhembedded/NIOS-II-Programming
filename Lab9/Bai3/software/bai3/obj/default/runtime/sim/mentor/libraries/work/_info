@@ -5,20 +5,20 @@ cModel Technology
 Z0 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
 vnios_sys_tb
 !i10b 1
-!s100 @dYQjd:>dm6hR_b]K6UI11
-IZHi>f3PA;=nO`O`VZefdg0
-Vh_bk1IN@kzVImL?6U@[A?2
-Z1 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
-w1744430059
-8D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
-FD:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
+Z1 !s100 @dYQjd:>dm6hR_b]K6UI11
+Z2 IZHi>f3PA;=nO`O`VZefdg0
+Z3 Vh_bk1IN@kzVImL?6U@[A?2
+Z4 dD:\Soc\NIOS-II-Programming\Lab9\Bai3\software\bai3\obj\default\runtime\sim\mentor
+Z5 w1744430059
+Z6 8D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
+Z7 FD:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v
 L0 6
-OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744430383.557000
+!s108 1744469860.442000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v|
-!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v|
+Z9 !s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/nios_sys_tb.v|
 !s101 -O0
 o-O0

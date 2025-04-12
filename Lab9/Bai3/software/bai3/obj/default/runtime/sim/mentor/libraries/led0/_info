@@ -17,7 +17,7 @@ OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744430382.271000
+!s108 1744469859.408000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_led0.v|
 !s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_led0.v|-work|led0|
 !s101 -O0

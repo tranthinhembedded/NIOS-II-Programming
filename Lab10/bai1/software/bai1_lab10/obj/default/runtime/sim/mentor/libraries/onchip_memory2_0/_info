@@ -1,0 +1,24 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai1_lab10\obj\default\runtime\sim\mentor
+vnios_sys_onchip_memory2_0
+!i10b 1
+!s100 EiaPXbdh1Nf]3cUOze;hb2
+I<bPS0LZIQ_`^`f[JiKnTM1
+V0YA`b1iiPC8n:WzlLUg0[1
+Z1 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai1_lab10\obj\default\runtime\sim\mentor
+w1744506004
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_onchip_memory2_0.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_onchip_memory2_0.v
+L0 21
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1744510902.721000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_onchip_memory2_0.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_onchip_memory2_0.v|-work|onchip_memory2_0|
+!s101 -O0
+o-work onchip_memory2_0 -O0

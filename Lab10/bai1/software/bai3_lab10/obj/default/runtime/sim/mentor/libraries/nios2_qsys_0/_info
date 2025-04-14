@@ -1,0 +1,138 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai3_lab10\obj\default\runtime\sim\mentor
+vnios_sys_nios2_qsys_0
+Ih>CmhX]WG5<iR11Hh;gF80
+V:02>56BGaS8Hn21:PknF00
+Z1 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai3_lab10\obj\default\runtime\sim\mentor
+Z2 w1744506003
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0.vo
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0.vo
+L0 31
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-work nios2_qsys_0 -O0
+!i10b 1
+!s100 ]OfjnnG2b2oSIHAGMXAI70
+!s85 0
+!s108 1744512136.454000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0.vo|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0.vo|-work|nios2_qsys_0|
+!s101 -O0
+vnios_sys_nios2_qsys_0_jtag_debug_module_sysclk
+Ikj6Iil;_=<UE2OUTj7mY_2
+V?PMGQoT=C:YJaoQm2_:lo3
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_sysclk.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_sysclk.v
+L0 21
+R3
+r1
+31
+R4
+!i10b 1
+!s100 <0KDe9XmUUXD17l?;AjE@2
+!s85 0
+!s108 1744512136.640000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_sysclk.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_sysclk.v|-work|nios2_qsys_0|
+!s101 -O0
+vnios_sys_nios2_qsys_0_jtag_debug_module_tck
+IDhlIU1A[8?O2106SldjW70
+VZk6XIef`io8P2_M:nK8c@1
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_tck.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_tck.v
+L0 21
+R3
+r1
+31
+R4
+!i10b 1
+!s100 _H7;73:A]k<?o_hm_J0`C2
+!s85 0
+!s108 1744512136.699000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_tck.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_tck.v|-work|nios2_qsys_0|
+!s101 -O0
+vnios_sys_nios2_qsys_0_jtag_debug_module_wrapper
+ILkUQBfZa]`UO?l0HL9TZ71
+Vc1ShU=^no0QUkXZGCHI4[3
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_wrapper.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_wrapper.v
+L0 21
+R3
+r1
+31
+R4
+!i10b 1
+!s100 IXIQ=ja@9;OmmgKOfB4FR0
+!s85 0
+!s108 1744512136.746000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_wrapper.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_jtag_debug_module_wrapper.v|-work|nios2_qsys_0|
+!s101 -O0
+vnios_sys_nios2_qsys_0_mult_cell
+IMLF_:1?o_R64S];6_fWZ63
+VGjz=I:V^@mjGgaJHVQTHX2
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_mult_cell.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_mult_cell.v
+L0 21
+R3
+r1
+31
+R4
+!i10b 1
+!s100 P0fX<iZ;GBzWaE6O]8R152
+!s85 0
+!s108 1744512136.798000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_mult_cell.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_mult_cell.v|-work|nios2_qsys_0|
+!s101 -O0
+vnios_sys_nios2_qsys_0_oci_test_bench
+I>jdHAR[L5h8Zd9Ni5Mk;j0
+Vok`TZ5FV2XKZRA_RfQ2272
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_oci_test_bench.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_oci_test_bench.v
+L0 21
+R3
+r1
+31
+R4
+!i10b 1
+!s100 Ea4FggE3b:;E]ADdaXg>^1
+!s85 0
+!s108 1744512136.847000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_oci_test_bench.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_oci_test_bench.v|-work|nios2_qsys_0|
+!s101 -O0
+vnios_sys_nios2_qsys_0_test_bench
+!i10b 1
+!s100 VD>P3YI`<;]E_d76iP>M32
+Ili:>_f[`5H]dZ<?HGNaH`3
+VBUR2`KAU3@]d0nHX0hFTP1
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_test_bench.v
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_test_bench.v
+L0 21
+R3
+r1
+!s85 0
+31
+!s108 1744512136.902000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_test_bench.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_nios2_qsys_0_test_bench.v|-work|nios2_qsys_0|
+!s101 -O0
+R4

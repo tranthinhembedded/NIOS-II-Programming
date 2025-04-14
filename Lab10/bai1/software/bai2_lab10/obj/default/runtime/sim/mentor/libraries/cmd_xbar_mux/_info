@@ -1,0 +1,71 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai2_lab10\obj\default\runtime\sim\mentor
+valtera_merlin_arb_adder
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+INRg9GQaVbSUaU>cocXIYm3
+VeEm48mj>0hhNR4acO5n:k1
+Z2 !s105 altera_merlin_arbitrator_sv_unit
+S1
+Z3 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai2_lab10\obj\default\runtime\sim\mentor
+Z4 w1744506005
+Z5 8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_arbitrator.sv
+Z6 FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_arbitrator.sv
+L0 228
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s108 1744511478.180000
+Z9 !s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_arbitrator.sv|
+Z10 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_arbitrator.sv|-work|cmd_xbar_mux|
+Z11 o-sv -work cmd_xbar_mux -O0
+!i10b 1
+!s100 dfiRNHS0n3NNLlfTfY;<i1
+!s85 0
+!s101 -O0
+valtera_merlin_arbitrator
+R1
+IFJ2nHY4bez]MdC2hoF:Nb0
+VkoHZHN`N_KjQAPBBQ3eh^0
+R2
+S1
+R3
+R4
+R5
+R6
+L0 103
+R7
+r1
+31
+R8
+R9
+R10
+R11
+!i10b 1
+!s100 Z4KZ4NSE2mc9alM[mQ`nz3
+!s85 0
+!s101 -O0
+vnios_sys_cmd_xbar_mux
+R1
+!i10b 1
+!s100 OJ7dCmgU1fPI:c91PW@aD1
+ILfLVQ_n?_aH1iiP>]gGo01
+VmiizQU4B8Te245P9mAPCl2
+!s105 nios_sys_cmd_xbar_mux_sv_unit
+S1
+R3
+R4
+8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_cmd_xbar_mux.sv
+FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_cmd_xbar_mux.sv
+L0 38
+R7
+r1
+!s85 0
+31
+!s108 1744511478.252000
+!s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_cmd_xbar_mux.sv|
+!s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_cmd_xbar_mux.sv|-work|cmd_xbar_mux|
+!s101 -O0
+R11

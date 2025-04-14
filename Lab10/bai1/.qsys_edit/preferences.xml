@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable>
+  <columns>
+   <connections preferredWidth="143" />
+   <irq preferredWidth="34" />
+  </columns>
+ </systemtable>
+ <clocktable>
+  <columns>
+   <clockname preferredWidth="269" />
+   <clocksource preferredWidth="268" />
+   <frequency preferredWidth="249" />
+  </columns>
+ </clocktable>
+ <library
+   expandedCategories="Library/Bridges and Adapters/DMA,Library,Project,Library/Bridges and Adapters" />
+ <window width="1100" height="800" x="738" y="7" />
+ <generation testbench_system="SIMPLE" testbench_simulation="VERILOG" />
+ <hdlexample language="VERILOG" />
+</preferences>

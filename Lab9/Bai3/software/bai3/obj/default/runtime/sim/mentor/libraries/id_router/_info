@@ -20,7 +20,7 @@ Z7 OV;L;10.1d;51
 r1
 !s85 0
 31
-Z8 !s108 1744469858.886000
+Z8 !s108 1744506381.097000
 Z9 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_id_router.sv|
 Z10 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_id_router.sv|-work|id_router|
 !s101 -O0

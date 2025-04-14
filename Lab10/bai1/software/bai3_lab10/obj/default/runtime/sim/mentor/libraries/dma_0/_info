@@ -1,0 +1,138 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai3_lab10\obj\default\runtime\sim\mentor
+vnios_sys_dma_0
+!i10b 1
+!s100 i?EaQ_;ClW8DA5LO53R4k1
+Ie;G<RbaOD@:^UaJB7lAL13
+VMn<nCf:2OlI:IPk<Ml3E43
+Z1 dD:\Soc\NIOS-II-Programming\Lab10\bai1\software\bai3_lab10\obj\default\runtime\sim\mentor
+Z2 w1744506005
+Z3 8D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_dma_0.v
+Z4 FD:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_dma_0.v
+L0 549
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1744512136.099000
+Z7 !s107 D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_dma_0.v|
+Z8 !s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab10/bai1/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_dma_0.v|-work|dma_0|
+!s101 -O0
+Z9 o-work dma_0 -O0
+vnios_sys_dma_0_byteenables
+!i10b 1
+!s100 GG=9dk4:iNT`A5_W2j<IH3
+I:hdH43X]ejJ9]E192_EY70
+V]X>2VLU=N0T`f_MJ929Q62
+R1
+R2
+R3
+R4
+L0 105
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_dma_0_fifo_module
+!i10b 1
+!s100 e1id4c94hVV_JG60oNZRA1
+I]Tb6dO22G:iiz32oaa[EH1
+VQJN_cdizQ;QZ87ZRSlfZm1
+R1
+R2
+R3
+R4
+L0 250
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_dma_0_fifo_module_fifo_ram_module
+!i10b 1
+!s100 ]?>@D10m^DQEOI<doA5X[0
+IZXaaCGe=N7WS7JJajLWj;2
+V27h=YZ=DNkL0lRKY=MMNz3
+R1
+R2
+R3
+R4
+L0 152
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_dma_0_mem_read
+!i10b 1
+!s100 ZAo`zSGmNZHX8g[BDLz4T3
+I8m8bljo69SiT5a5Z[Q?=C1
+VP_ZIGd=JRQ^mig>QDmhSL2
+R1
+R2
+R3
+R4
+L0 413
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_dma_0_mem_write
+!i10b 1
+!s100 N4HXEoi^fPU6f[a3cA4X<0
+IYS9QoTGXdIe<Vf48gkO?J3
+VKQWUIbndY8F=ez`66;CjA3
+R1
+R2
+R3
+R4
+L0 500
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_dma_0_read_data_mux
+!i10b 1
+!s100 SaTGkj9CM[QCP_eM]WeMV0
+IVN5di@aiJ6Hf`iN:_D6G:0
+VJ;cC[XMkFzg7`[>=8g@AZ1
+R1
+R2
+R3
+R4
+L0 21
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9

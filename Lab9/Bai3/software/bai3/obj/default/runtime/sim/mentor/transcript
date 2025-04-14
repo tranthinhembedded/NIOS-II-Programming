@@ -590,8 +590,9 @@ sim:/nios_sys_tb/nios_sys_inst/led3_external_connection_export \
 sim:/nios_sys_tb/nios_sys_inst/led2_external_connection_export \
 sim:/nios_sys_tb/nios_sys_inst/led1_external_connection_export \
 sim:/nios_sys_tb/nios_sys_inst/led0_external_connection_export
-add wave -position insertpoint sim:/nios_sys_tb/nios_sys_inst/irq_mapper/*
-run 3ms
+add wave -position insertpoint  \
+sim:/nios_sys_tb/nios_sys_inst/irq_mapper/sender_irq
+run 5ms
 # Warning: read_during_write_mode_mixed_ports is assumed as               OLD_DATA
 # Time: 0  Instance: nios_sys_tb.nios_sys_inst.nios2_qsys_0.niil11O
 #                    0: INFO: nios_sys_tb.nios_sys_inst_clk_bfm.__hello: - Hello from altera_clock_source.

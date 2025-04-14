@@ -20,7 +20,7 @@ Z2 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744469858.164000
+!s108 1744506380.360000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_irq_mapper.sv|
 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_irq_mapper.sv|-work|irq_mapper|
 !s101 -O0

@@ -20,7 +20,7 @@ Z4 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744469858.827000
+!s108 1744506381.041000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_st_pipeline_base.v|
 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_st_pipeline_base.v|-work|limiter|
 !s101 -O0
@@ -43,7 +43,7 @@ R5
 !s100 L2IViTN3EAm[nCzYKF>Ul0
 !s105 altera_merlin_traffic_limiter_sv_unit
 !s85 0
-!s108 1744469858.783000
+!s108 1744506380.982000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_traffic_limiter.sv|
 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_merlin_traffic_limiter.sv|-work|limiter|
 !s101 -O0

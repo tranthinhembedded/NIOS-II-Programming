@@ -21,7 +21,7 @@ Z4 OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744469860.227000
+!s108 1744506382.429000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_reset_source.sv|
 !s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_reset_source.sv|-L|altera_avalon_vip_pkgs_lib|-work|nios_sys_inst_reset_bfm|
 !s101 -O0

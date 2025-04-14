@@ -17,7 +17,7 @@ OV;L;10.1d;51
 r1
 !s85 0
 31
-!s108 1744469859.450000
+!s108 1744506381.669000
 !s107 D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_timer_0.v|
 !s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab9/Bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_timer_0.v|-work|timer_0|
 !s101 -O0

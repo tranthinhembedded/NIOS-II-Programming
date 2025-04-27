@@ -1,0 +1,110 @@
+
+**** Build of configuration Nios II for project final3 ****
+
+make all 
+      1 [main] sh 5908 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 14668 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 14056 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../final3_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../final3_bsp/
+      1 [main] pwd 4524 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 17380 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 12548 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] echo 7292 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Info: Compiling hello_world.c to obj/default/hello_world.o
+      1 [main] mkdir 11892 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+nios2-elf-gcc -xc -MP -MMD -c -I../final3_bsp//HAL/inc -I../final3_bsp/ -I../final3_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o obj/default/hello_world.o hello_world.c
+hello_world.c: In function 'Switch_IRQ_Handler':
+hello_world.c:230: warning: implicit declaration of function 'transmitString'
+hello_world.c: At top level:
+hello_world.c:394: warning: conflicting types for 'transmitString'
+hello_world.c:230: warning: previous implicit declaration of 'transmitString' was here
+hello_world.c: In function 'parse_data':
+hello_world.c:428: warning: implicit declaration of function 'atoi'
+      1 [main] true 11424 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 16852 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Linking final3.elf
+the public mailing list cygwin@cygwin.com
+nios2-elf-g++  -T'../final3_bsp//linker.x' -msys-crt0='../final3_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../final3_bsp/   -Wl,-Map=final3.map   -O0 -g -Wall   -EL -mno-hw-div -mno-hw-mul -mno-hw-mulx  -o final3.elf obj/default/hello_world.o -lm 
+nios2-elf-insert final3.elf --thread_model hal --cpu_name nios2_qsys_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_sys --quartus_project_dir "D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3" --sopcinfo D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys.sopcinfo
+      1 [main] sh 5196 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] uname 3240 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 13784 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+Info: (final3.elf) 68 KBytes program size (code + initialized data).
+Info:              315 KBytes free for stack + heap.
+      1 [main] echo 6564 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Creating final3.objdump
+the public mailing list cygwin@cygwin.com
+nios2-elf-objdump --disassemble --syms --all-header --source final3.elf >final3.objdump
+      1 [main] sh 3184 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 16192 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[final3 build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project final3 ****
+
+make all 
+      1 [main] sh 15424 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 19308 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 12968 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../final3_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../final3_bsp/
+      1 [main] pwd 2564 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 15404 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 18512 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 2820 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 18412 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[final3 build complete]
+
+**** Build Finished ****
+
+**** Build of configuration Nios II for project final3 ****
+
+make all 
+      1 [main] sh 14356 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 1704 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] echo 8380 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+Info: Building ../final3_bsp/
+the public mailing list cygwin@cygwin.com
+make --no-print-directory -C ../final3_bsp/
+      1 [main] pwd 9088 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 7808 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+     30 [main] sh 2352 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[BSP build complete]
+      1 [main] true 9948 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+      1 [main] sh 8664 find_fast_cwd: WARNING: Couldn't compute FAST_CWD pointer.  Please report this problem to
+the public mailing list cygwin@cygwin.com
+[final3 build complete]
+
+**** Build Finished ****

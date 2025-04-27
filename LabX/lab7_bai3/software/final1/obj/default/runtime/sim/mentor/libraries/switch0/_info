@@ -1,0 +1,24 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+vnios_sys_switch0
+!i10b 1
+!s100 O4Zh`Aj=h^TWb?K9kBC771
+IGN;TS>X8j@5NXChM6zZ`42
+VkmZ>CI>gW6SE9>O6mA@=60
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+w1745587691
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_switch0.v
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_switch0.v
+L0 21
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745595184.568000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_switch0.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_switch0.v|-work|switch0|
+!s101 -O0
+o-work switch0 -O0

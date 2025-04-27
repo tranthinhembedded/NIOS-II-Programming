@@ -1,0 +1,341 @@
+#include "sys/alt_stdio.h"
+#include <stdio.h>
+#include <string.h>
+#include "system.h"
+#include "altera_avalon_pio_regs.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+#include "io.h"
+#include "unistd.h"
+#include "altera_avalon_uart_regs.h"
+#include "altera_avalon_uart.h"
+
+// ======================= LED 7-Segment HEX Table ========================
+const unsigned char hex_table[16] = {
+    0xC0, 0xF9, 0xA4, 0xB0,  // 0-3
+    0x99, 0x92, 0x82, 0xF8,  // 4-7
+    0x80, 0x90, 0x88, 0x83,  // 8-B
+    0xC6, 0xA1, 0x86, 0x8E   // C-F
+};
+
+// ======================= Global Variables ================================
+int hh = 0, mm = 0, ss = 0;             // Hour, Minute, Second
+int dd = 0, month = 0, year = 0;        // Day, Month, Year
+int display_mode = 0;                   // 0 = time, 1 = date
+int display_time = 0;                   // Seconds since last mode switch
+char lcd_buffer[32];                   // LCD display buffer
+int mode = 0;                          // Clock mode for Timer IRQ
+
+// UART variables
+char uart_buffer[20];
+int uart_index = 0;
+volatile int data_ready = 0;
+// Test string for parse_data
+const char test_string[] = "$24042025155045%";
+
+// ======================= LCD Functions ===================================
+void lcd_command(char data) {
+    IOWR(LCD_RS_BASE, 0, 0x00);
+    IOWR(LCD_RW_BASE, 0, 0x00);
+    IOWR(LCD_DATA_BASE, 0, data);
+    IOWR(LCD_EN_BASE, 0, 0x01);
+    usleep(5);
+    IOWR(LCD_EN_BASE, 0, 0x00);
+    usleep(5);
+}
+
+void lcd_data(char data) {
+    IOWR(LCD_RS_BASE, 0, 0x01);
+    IOWR(LCD_RW_BASE, 0, 0x00);
+    IOWR(LCD_DATA_BASE, 0, data);
+    IOWR(LCD_EN_BASE, 0, 0x01);
+    usleep(5);
+    IOWR(LCD_EN_BASE, 0, 0x00);
+    usleep(5);
+}
+
+void lcd_string(char *str) {
+    int i = 0;
+    while (str[i] != 0) {
+        lcd_data(str[i]);
+        i++;
+    }
+}
+
+void lcd_init(void) {
+    usleep(15000);               // Wait 15ms
+    lcd_command(0x38);           // 8-bit, 2-line mode
+    usleep(4100);
+    lcd_command(0x38);
+    usleep(100);
+    lcd_command(0x38);
+    usleep(2000);
+    lcd_command(0x0C);           // Display ON, Cursor OFF
+    usleep(2000);
+    lcd_command(0x01);           // Clear display
+    usleep(2000);
+    lcd_command(0x06);           // Entry mode: Increment cursor
+    usleep(2000);
+}
+
+// ====================== Display Functions ================================
+void display_on_lcd(void) {
+    lcd_command(0x80); // First line
+    sprintf(lcd_buffer, "    %02d:%02d:%02d    ", hh, mm, ss);
+    lcd_string(lcd_buffer);
+
+    lcd_command(0xC0); // Second line
+    sprintf(lcd_buffer, "   %02d-%02d-%04d   ", dd, month, year);
+    lcd_string(lcd_buffer);
+}
+
+void display_on_led(void) {
+    if (display_mode == 0) {
+        // Show time
+        IOWR(LED8_BASE, 0, hex_table[hh / 10]);
+        IOWR(LED7_BASE, 0, hex_table[hh % 10]);
+        IOWR(LED6_BASE, 0, hex_table[mm / 10]);
+        IOWR(LED5_BASE, 0, hex_table[mm % 10]);
+        IOWR(LED4_BASE, 0, hex_table[ss / 10]);
+        IOWR(LED3_BASE, 0, hex_table[ss % 10]);
+        IOWR(LED2_BASE, 0, 0xFF);
+        IOWR(LED1_BASE, 0, 0xFF);
+    } else {
+        // Show date
+        IOWR(LED8_BASE, 0, hex_table[dd / 10]);
+        IOWR(LED7_BASE, 0, hex_table[dd % 10]);
+        IOWR(LED6_BASE, 0, hex_table[month / 10]);
+        IOWR(LED5_BASE, 0, hex_table[month % 10]);
+        IOWR(LED4_BASE, 0, hex_table[year / 1000]);
+        IOWR(LED3_BASE, 0, hex_table[(year / 100) % 10]);
+        IOWR(LED2_BASE, 0, hex_table[(year / 10) % 10]);
+        IOWR(LED1_BASE, 0, hex_table[year % 10]);
+    }
+}
+
+// ====================== Timer IRQ Handler ================================
+void Timer_IRQ_Handler(void* isr_context) {
+    if (mode == 0) {
+        ss++;
+        if (ss == 60) { ss = 0; mm++; }
+        if (mm == 60) { mm = 0; hh++; }
+        if (hh == 24) { hh = 0; dd++; }
+
+        // Update day/month/year
+        if ((month == 4 || month == 6 || month == 9 || month == 11) && dd > 30) {
+            dd = 1; month++;
+        } else if (month == 2 && dd > 28) {
+            dd = 1; month++; // Not leap year
+        } else if (dd > 31) {
+            dd = 1; month++;
+        }
+
+        if (month > 12) {
+            month = 1; year++;
+        }
+    }
+
+    // Update display mode timing
+    display_time++;
+    if (display_mode == 0 && display_time >= 8) {
+        display_mode = 1;
+        display_time = 0;
+    } else if (display_mode == 1 && display_time >= 2) {
+        display_mode = 0;
+        display_time = 0;
+    }
+
+    // Clear timer interrupt flag
+    IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, ALTERA_AVALON_TIMER_STATUS_TO_MSK);
+}
+
+// ====================== Timer Initialization ==============================
+void Timer_Init(void) {
+    unsigned int period = 50000000 - 1; // 1 second with 50 MHz clock
+
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE, ALTERA_AVALON_TIMER_CONTROL_STOP_MSK);
+
+    IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_0_BASE, period);
+    IOWR_ALTERA_AVALON_TIMER_PERIODH(TIMER_0_BASE, (period >> 16));
+
+    IOWR_ALTERA_AVALON_TIMER_CONTROL(
+        TIMER_0_BASE,
+        ALTERA_AVALON_TIMER_CONTROL_CONT_MSK |
+        ALTERA_AVALON_TIMER_CONTROL_ITO_MSK  |
+        ALTERA_AVALON_TIMER_CONTROL_START_MSK
+    );
+}
+// ====================== Switch and Key Functions =========================
+void Switch_IRQ_Handler(void* context) {
+    unsigned char edge_val = IORD_ALTERA_AVALON_PIO_EDGE_CAP(SWITCH0_BASE);
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(SWITCH0_BASE, edge_val); // Clear edge capture
+
+    unsigned char sw_state = IORD_ALTERA_AVALON_PIO_DATA(SWITCH0_BASE);
+    unsigned char sw0 = sw_state & 0x01;
+    unsigned char sw1 = (sw_state >> 1) & 0x01;
+
+    if (sw0 == 1 && sw1 == 0) {
+        mode = 1; // Edit time mode
+        transmitString("Editing time mode\n");
+    } else if (sw1 == 1 && sw0 == 0) {
+        mode = 2; // Edit date mode
+        transmitString("Editing date mode\n");
+    } else {
+        mode = 0; // Normal clock mode
+        transmitString("Normal clock mode\n");
+    }
+}
+void Key_Handler(void) {
+    unsigned char key1_state = IORD_ALTERA_AVALON_PIO_DATA(KEY1_BASE);
+    unsigned char key2_state = IORD_ALTERA_AVALON_PIO_DATA(KEY2_BASE);
+    unsigned char key3_state = IORD_ALTERA_AVALON_PIO_DATA(KEY3_BASE);
+
+    if (mode == 1) { // Edit time
+        if (key1_state & 0x01) { // KEY1: Increment hour
+            hh = (hh + 1) % 24;
+        }
+        if (key2_state & 0x01) { // KEY2: Increment minute
+            mm = (mm + 1) % 60;
+        }
+        if (key3_state & 0x01) { // KEY3: Increment second
+            ss = (ss + 1) % 60;
+        }
+    } else if (mode == 2) { // Edit date
+        if (key1_state & 0x01) { // KEY1: Increment day
+            dd = (dd % 31) + 1; // Simplified: max 31 days
+        }
+        if (key2_state & 0x01) { // KEY2: Increment month
+            month = (month % 12) + 1;
+        }
+        if (key3_state & 0x01) { // KEY3: Increment year
+            year = (year + 1) % 10000;
+        }
+    }
+}
+void Switch_Init(void) {
+    IOWR_ALTERA_AVALON_PIO_IRQ_MASK(SWITCH0_BASE, 0x03); // Enable interrupts for SW0, SW1
+    IOWR_ALTERA_AVALON_PIO_EDGE_CAP(SWITCH0_BASE, 0x03); // Clear initial edge capture
+}
+
+
+
+
+// ====================== UART Functions ===================================
+void transmitString(char* mess) {
+    while (!(IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & ALTERA_AVALON_UART_STATUS_TRDY_MSK));
+
+    while (*mess) {
+        IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, *mess);
+        mess++;
+        usleep(600);
+    }
+}
+
+char receiveChar() {
+    alt_u8 status;
+    char buff;
+
+    status = IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE);
+
+    if (status & ALTERA_AVALON_UART_STATUS_RRDY_MSK) {
+        buff = IORD_ALTERA_AVALON_UART_RXDATA(UART_0_BASE);
+        IOWR_ALTERA_AVALON_UART_STATUS(UART_0_BASE, 0);
+        return buff;
+    }
+
+    return '\0';
+}
+
+void parse_data(char* str) {
+    if (str[0] == '$' && str[15] == '%' && strlen(str) == 16) {
+        char dd_str[3] = {str[1], str[2], '\0'};
+        char month_str[3] = {str[3], str[4], '\0'};
+        char year_str[5] = {str[5], str[6], str[7], str[8], '\0'};
+        char hh_str[3] = {str[9], str[10], '\0'};
+        char mm_str[3] = {str[11], str[12], '\0'};
+        char ss_str[3] = {str[13], str[14], '\0'};
+
+        dd = atoi(dd_str);
+        month = atoi(month_str);
+        year = atoi(year_str);
+        hh = atoi(hh_str);
+        mm = atoi(mm_str);
+        ss = atoi(ss_str);
+
+        sprintf(lcd_buffer, "dd=%d, month=%d, year=%d, hh=%d, mm=%d, ss=%d\n",
+                dd, month, year, hh, mm, ss);
+        alt_putstr(lcd_buffer);
+
+        if (dd >= 1 && dd <= 31 && month >= 1 && month <= 12 && year >= 0 &&
+            hh >= 0 && hh <= 23 && mm >= 0 && mm <= 59 && ss >= 0 && ss <= 59) {
+            char confirm_msg[50];
+            sprintf(confirm_msg, "Time updated: %02d/%02d/%04d %02d:%02d:%02d\n", dd, month, year, hh, mm, ss);
+            transmitString(confirm_msg);
+        } else {
+            transmitString("Invalid time data\n");
+        }
+    } else {
+        transmitString("Invalid format\n");
+    }
+}
+
+void UART_IRQ_Handler(void* context) {
+    unsigned char data = IORD_ALTERA_AVALON_UART_RXDATA(UART_0_BASE);
+    if (data == '$') {
+        uart_index = 0;
+        uart_buffer[uart_index++] = data;
+    } else if (data == '%' && uart_index > 0) {
+        uart_buffer[uart_index] = data;
+        uart_buffer[uart_index + 1] = '\0';
+        data_ready = 1;
+    } else if (uart_index > 0 && uart_index < 20) {
+        uart_buffer[uart_index++] = data;
+    }
+
+    IOWR_ALTERA_AVALON_UART_STATUS(UART_0_BASE, 0);
+}
+
+void UART_Init(void) {
+    unsigned int baud_rate = 9600;
+    unsigned int divisor = (ALT_CPU_FREQ / baud_rate) - 1;
+    IOWR_ALTERA_AVALON_UART_DIVISOR(UART_0_BASE, divisor);
+    IOWR_ALTERA_AVALON_UART_CONTROL(UART_0_BASE, ALTERA_AVALON_UART_CONTROL_RRDY_MSK);
+}
+
+// ============================ MAIN ========================================
+int main() {
+    alt_putstr("DIGITAL CLOCK - GROUP 3 !!!\n");
+    // Turn on LCD
+    IOWR(LCD_ON_BASE, 0, 0x01);
+    usleep(50000);
+    lcd_init();
+    // Setup timer
+    Timer_Init();
+    // Setup switch
+    Switch_Init();
+    // UART init
+    UART_Init();
+
+    // Register IRQ functions
+    alt_ic_isr_register(0, TIMER_0_IRQ, Timer_IRQ_Handler, NULL, NULL);
+    alt_ic_isr_register(0, UART_0_IRQ, UART_IRQ_Handler, NULL, NULL);
+    alt_ic_isr_register(0, SW_IRQ, Switch_IRQ_Handler, NULL, NULL);
+
+    // Send initial message
+    transmitString("Ready to receive time data\n");
+    // Test parse_data with test_string
+
+    alt_putstr("Testing parse_data with test string:\n");
+    parse_data((char*)test_string);
+    while (1) {
+        if (data_ready) {
+            parse_data(uart_buffer);
+            data_ready = 0;
+        }
+        // Update display
+        display_on_lcd();
+        display_on_led();
+    }
+
+    return 0;
+}

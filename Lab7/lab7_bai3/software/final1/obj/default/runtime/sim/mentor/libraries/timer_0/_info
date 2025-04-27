@@ -1,0 +1,24 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+vnios_sys_timer_0
+!i10b 1
+!s100 CZL4^KD9^cn4`BX03IebB2
+IHU>PBT>4kNJHTcjD??TML3
+VYBIoHA:9_oYAg9i=K5efA1
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+w1745587691
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_timer_0.v
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_timer_0.v
+L0 21
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745595184.440000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_timer_0.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_timer_0.v|-work|timer_0|
+!s101 -O0
+o-work timer_0 -O0

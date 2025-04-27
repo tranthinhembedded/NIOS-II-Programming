@@ -1,0 +1,27 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+vnios_sys_rsp_xbar_demux_017
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 Nbm7nFYQ3gWURUaOZE4X12
+IAGKAe>5S=Y^oPDWhLOkF=2
+V4_c^AUcL0TVCR5RTe`c?@3
+!s105 nios_sys_rsp_xbar_demux_017_sv_unit
+S1
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+w1745587692
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_rsp_xbar_demux_017.sv
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_rsp_xbar_demux_017.sv
+L0 43
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745595182.900000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_rsp_xbar_demux_017.sv|
+!s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_rsp_xbar_demux_017.sv|-work|rsp_xbar_demux_017|
+!s101 -O0
+o-sv -work rsp_xbar_demux_017 -O0

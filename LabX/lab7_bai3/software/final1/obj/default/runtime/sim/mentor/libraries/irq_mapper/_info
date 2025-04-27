@@ -1,0 +1,27 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+vnios_sys_irq_mapper
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 JFiYH4bZ`8LDom0aXT`ZL0
+IH76E0@YdkMkX17Y87O_X81
+V`gOXPV37OC0:A;z`OiK1z2
+!s105 nios_sys_irq_mapper_sv_unit
+S1
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+w1745587692
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_irq_mapper.sv
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_irq_mapper.sv
+L0 31
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745595182.441000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_irq_mapper.sv|
+!s90 -reportprogress|300|-sv|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_irq_mapper.sv|-work|irq_mapper|
+!s101 -O0
+o-sv -work irq_mapper -O0

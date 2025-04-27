@@ -1,0 +1,40 @@
+#include "sys/alt_stdio.h"
+#include "system.h"
+#include "unistd.h"
+#include "altera_avalon_uart_regs.h"
+#include "altera_avalon_uart.h"
+
+void transmitString(char* str) {
+    while ((IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & ALTERA_AVALON_UART_STATUS_TRDY_MSK) == 0) {
+        usleep(100);
+    }
+    for (int i = 0; str[i] != '\0'; i++) {
+        IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, str[i]);
+        usleep(1000);
+    }
+}
+
+int main() {
+    char rxData;
+    int prevRxData = -1;
+
+    while (1) {
+        if ((IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & 0x80) == 0x80) {
+            rxData = IORD_ALTERA_AVALON_UART_RXDATA(UART_0_BASE);
+
+            if (rxData != prevRxData) {
+                if (rxData == 'S') {
+                    transmitString("Down\n");
+                } else if (rxData == 'W') {
+                    transmitString("Up\n");
+                } else if (rxData == 'A') {
+                    transmitString("Left\n");
+                } else if (rxData == 'D') {
+                    transmitString("Right\n");
+                }
+                prevRxData = rxData;
+            }
+        }
+        usleep(1000);
+    }
+}

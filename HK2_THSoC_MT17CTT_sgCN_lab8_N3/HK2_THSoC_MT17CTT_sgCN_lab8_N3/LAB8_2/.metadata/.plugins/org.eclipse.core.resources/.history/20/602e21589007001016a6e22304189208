@@ -1,0 +1,52 @@
+#include "sys/alt_stdio.h"
+#include "system.h"
+#include "unistd.h"
+#include "stdio.h"
+#include "altera_avalon_uart_regs.h"
+
+void send_uart(const char *message)
+{
+    while (*message)
+    {
+        while (!(IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & ALTERA_AVALON_UART_STATUS_TRDY_MSK));
+        IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, *message);
+        message++;
+    }
+
+
+    while (!(IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & ALTERA_AVALON_UART_STATUS_TRDY_MSK));
+    IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, '\0');
+}
+
+int main()
+{
+    char rxData;
+    printf("UART Communication Started!\n");
+
+    while (1)
+    {
+        if (IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & ALTERA_AVALON_UART_STATUS_RRDY_MSK)
+        {
+            rxData = IORD_ALTERA_AVALON_UART_RXDATA(UART_0_BASE);
+
+            switch (rxData)
+            {
+            case 'S':
+                send_uart("Down\n");
+                break;
+            case 'W':
+                send_uart("Up\n");
+                break;
+            case 'A':
+                send_uart("Left\n");
+                break;
+            case 'D':
+                send_uart("Right\n");
+                break;
+            default:
+                send_uart("Invalid Key\n");
+                break;
+            }
+        }
+    }
+}

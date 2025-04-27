@@ -1,0 +1,100 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+vnios_sys_uart_0
+!i10b 1
+!s100 DPBM@VAOg:iQeAYZMcMcM3
+I]b?PE;bibIGYOFEY_gYIV2
+V_JCd4@DheU9E0Z^>_9z];0
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+Z2 w1745587690
+Z3 8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_uart_0.v
+Z4 FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_uart_0.v
+L0 789
+Z5 OV;L;10.1d;51
+r1
+!s85 0
+31
+Z6 !s108 1745595184.647000
+Z7 !s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_uart_0.v|
+Z8 !s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_uart_0.v|-work|uart_0|
+!s101 -O0
+Z9 o-work uart_0 -O0
+vnios_sys_uart_0_regs
+!i10b 1
+!s100 jVF?6;LL55CUNfgOLga6I2
+I;4<SNS@2ED1]ZbOm2RTzo3
+VRDUR5oF4W<EdDM5?cQl0G2
+R1
+R2
+R3
+R4
+L0 544
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_uart_0_rx
+!i10b 1
+!s100 kH:62K`07mS9HA<G0E`:U3
+I<9_T1PY6]NUW2HKl<_eX>1
+VFkgS_X`nz?eAF_NQ^DFae3
+R1
+R2
+R3
+R4
+L0 286
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_uart_0_rx_stimulus_source
+!i10b 1
+!s100 JPf:hJIz0=YaZ1W0U3@aP0
+I>N^O67agU;UQ2W<emgTEn3
+VAL63YAA6`X;9]0>CAdz9Q0
+R1
+R2
+R3
+R4
+L0 193
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9
+vnios_sys_uart_0_tx
+!i10b 1
+!s100 d59B2>nIf4_zz0g?aT=go2
+Ij]D4FGL2hPUO7W1b<ChC^1
+V3E[BaeLi=7FbSiFeAHc<Q0
+R1
+R2
+R3
+R4
+L0 21
+R5
+r1
+!s85 0
+31
+R6
+R7
+R8
+!s101 -O0
+R9

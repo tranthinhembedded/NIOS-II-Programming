@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+valtera_reset_controller
+I>@MHoR7^O6D?e18gkhAbc1
+VBWWT<i0A@QcN4KE]hBS<V0
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+Z2 w1745587692
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_controller.v
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_controller.v
+L0 29
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-work rst_controller -O0
+!i10b 1
+!s100 m04ILA3cBf_Eh[4gX?kz10
+!s85 0
+!s108 1745595183.364000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
+!s101 -O0
+valtera_reset_synchronizer
+!i10b 1
+!s100 JJ0JQ0C`SaUGmXb[5kaZZ3
+IFYJ[?K<L;XV>I;;2PH^ic2
+V3CjoOZCIEdzCJgPn8]D7`2
+R1
+R2
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_synchronizer.v
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_synchronizer.v
+L0 24
+R3
+r1
+!s85 0
+31
+!s108 1745595183.429000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_reset_synchronizer.v|-work|rst_controller|
+!s101 -O0
+R4

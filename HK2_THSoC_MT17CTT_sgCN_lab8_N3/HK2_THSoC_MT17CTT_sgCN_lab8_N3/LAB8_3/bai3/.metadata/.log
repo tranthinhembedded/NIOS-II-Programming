@@ -1,0 +1,103 @@
+!SESSION 2025-03-23 09:29:20.721 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-03-23 09:30:22.923
+!MESSAGE Indexed 'lab8_bai2_bsp' (82 sources, 97 headers) in 1.25 sec: 2,001 declarations; 3,620 references; 118 unresolved inclusions; 5 syntax errors; 218 unresolved names (3.73%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-03-23 09:30:24.342
+!MESSAGE Indexed 'lab8_bai2' (1 sources, 13 headers) in 0.01 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-03-23 09:45:34.363
+!MESSAGE Indexed 'lab8bai2_bsp' (82 sources, 59 headers) in 0.70 sec: 1,043 declarations; 2,663 references; 119 unresolved inclusions; 5 syntax errors; 217 unresolved names (5.53%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-03-23 09:45:36.137
+!MESSAGE Indexed 'lab8bai2' (1 sources, 13 headers) in 0.03 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 09:48:30.665
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 09:48:32.550
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8bai2/lab8bai2.elf]
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-03-23 09:50:40.965
+!MESSAGE Indexed 'lab8_bai3_bsp' (82 sources, 59 headers) in 0.66 sec: 1,043 declarations; 2,663 references; 119 unresolved inclusions; 5 syntax errors; 217 unresolved names (5.53%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2025-03-23 09:50:42.696
+!MESSAGE Indexed 'lab8_bai3' (1 sources, 13 headers) in 0.02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 09:52:52.858
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 09:52:53.276
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 09:52:55.169
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:38:21.284
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:38:21.721
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:38:23.623
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:38:54.319
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:38:54.751
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:38:56.630
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:41:19.334
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:41:19.722
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:41:21.603
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:41:51.585
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:41:52.042
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:41:53.967
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:43:25.969
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:43:26.374
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:43:28.258
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:44:10.677
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:44:11.105
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:44:12.998
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:45:25.797
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:45:26.245
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2025-03-23 10:45:28.151
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go /cygdrive/d/TH_SOC/LAB8/bai2/software/lab8_bai3/lab8_bai3.elf]

@@ -1,0 +1,25 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+vnios_sys_LCD_ON
+!i10b 1
+!s100 al^n2:Wb[?k12a=n:Tj[e2
+I`BM]?fj4e5UBMFcn=:KES0
+VoRoEzWid4AjTF]oLdm^z52
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+w1745587689
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_LCD_ON.v
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_LCD_ON.v
+L0 21
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745595184.849000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_LCD_ON.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/nios_sys_LCD_ON.v|-work|LCD_ON|
+!s101 -O0
+o-work LCD_ON -O0
+nnios_sys_@l@c@d_@o@n

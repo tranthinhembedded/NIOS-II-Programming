@@ -1,0 +1,66 @@
+#include "sys/alt_stdio.h"
+#include "system.h"
+#include "unistd.h"
+#include "altera_avalon_uart_regs.h"
+#include "altera_avalon_uart.h"
+
+// Ham gui du lieu UART
+void transmitString(char* mess) {
+    // Cho UART san sang de gui
+    while (!(IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE) & ALTERA_AVALON_UART_STATUS_TRDY_MSK));
+
+    // Gui tung ky tu trong chuoi
+    while (*mess) {
+        IOWR_ALTERA_AVALON_UART_TXDATA(UART_0_BASE, *mess);
+        mess++;
+        usleep(600); // Cho mot chut de dam bao gui xong
+    }
+}
+
+// Ham nhan du lieu UART
+char receiveChar() {
+    alt_u8 status;
+    char buff;
+
+    // Doc trang thai UART
+    status = IORD_ALTERA_AVALON_UART_STATUS(UART_0_BASE);
+
+    // Kiem tra neu UART san sang nhan du lieu
+    if (status & ALTERA_AVALON_UART_STATUS_RRDY_MSK) {
+        buff = IORD_ALTERA_AVALON_UART_RXDATA(UART_0_BASE); // Nhan ky tu tu UART
+
+        // Xoa co trang thai de chuan bi nhan tiep
+        IOWR_ALTERA_AVALON_UART_STATUS(UART_0_BASE, 0);
+        return buff;
+    }
+
+    return '\0'; // Tra ve NULL neu khong co du lieu
+}
+
+int main() {
+    char rxData;
+
+    while (1) {
+        // Nhan du lieu tu UART
+        rxData = receiveChar();
+
+        if (rxData != '\0') {  // Neu nhan duoc du lieu hop le
+            switch (rxData) {
+                case 'S':
+                    transmitString("Down\n");
+                    break;
+                case 'W':
+                    transmitString("Up\n");
+                    break;
+                case 'A':
+                    transmitString("Left\n");
+                    break;
+                case 'D':
+                    transmitString("Right\n");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+}

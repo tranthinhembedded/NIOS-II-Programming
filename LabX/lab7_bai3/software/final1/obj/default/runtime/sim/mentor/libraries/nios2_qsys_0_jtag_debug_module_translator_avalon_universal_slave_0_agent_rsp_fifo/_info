@@ -1,0 +1,24 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+valtera_avalon_sc_fifo
+!i10b 1
+!s100 ^ge4C69j8=OG>OH5eW3Q_3
+Id05b3[AR0h9_>NRo]OX3I0
+VjOzUMS5nAQIa6?lLKEfID0
+Z1 dD:\Soc\NIOS-II-Programming\Lab7\lab7_bai3\software\final1\obj\default\runtime\sim\mentor
+w1745587691
+8D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_sc_fifo.v
+FD:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_sc_fifo.v
+L0 21
+OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1745595183.864000
+!s107 D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|D:/Soc/NIOS-II-Programming/Lab7/lab7_bai3/nios_sys/testbench/nios_sys_tb/simulation/submodules/altera_avalon_sc_fifo.v|-work|nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo|
+!s101 -O0
+o-work nios2_qsys_0_jtag_debug_module_translator_avalon_universal_slave_0_agent_rsp_fifo -O0
